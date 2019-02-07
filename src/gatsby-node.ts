@@ -20,7 +20,7 @@ export const sourceNodes = async (
     throwError('rss must be a valid URL!');
   }
 
-  console.time(colorizeLog('\nAnchor podcats fetched in'));
+  console.time(colorizeLog('\nAnchor podcasts fetched in'));
   const parser = new Parser();
   const anchorData = await parser.parseURL(rss);
   if (!anchorData || !anchorData.title) {
@@ -67,5 +67,5 @@ export const sourceNodes = async (
       contentDigest: createContentDigest(podcastDigest),
     },
   });
-  console.timeEnd(colorizeLog('\nAnchor podcats fetched in'));
+  console.timeEnd(colorizeLog('\nAnchor podcasts fetched in'));
 };
