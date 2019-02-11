@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-anchor",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Source plugin to fetch podcast episodes from Anchor into Gatsby",
   "author": "Henrique Cavalieri <@hcavalieri>",
   "license": "MIT",
