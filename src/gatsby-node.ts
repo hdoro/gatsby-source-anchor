@@ -30,11 +30,15 @@ export const sourceNodes = async (
   const getEpisodeId = (guid: string) => `anchor-episode-${guid}`;
 
   for (const p of anchorData.items) {
-    const episodeDigest = JSON.stringify(p);
-    createNode({
+    const episodeData = {
       ...p,
+      embedLink: p.link.replace(/\/episodes/g, "/embed/episodes")
+    }
+    const episodeDigest = JSON.stringify(episodeData);
+    createNode({
+      ...episodeData,
       // meta information for the node
-      id: getEpisodeId(p.guid),
+      id: getEpisodeId(episodeData.guid),
       parent: null,
       children: [],
       internal: {
